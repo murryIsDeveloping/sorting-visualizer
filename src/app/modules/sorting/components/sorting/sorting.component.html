@@ -1,0 +1,17 @@
+<div class="sorting__controls">
+    <button (click)="speed$.next(speed$.value - 50)">Speed Up</button>
+    <button (click)="speed$.next(speed$.value + 50)">Slow Down</button>
+
+    <button (click)="instances$.next(instances$.value + 1)">More Instances</button>
+    <button (click)="instances$.next(instances$.value - 1)">Less Instances</button>
+</div>
+
+<div class="sorting__graph">
+    <div *ngFor="let bar of quickSort$ | async" class="sorting__bar" 
+        [ngStyle]="{ 'height': bar.value + 'px', 'background-color': bar | color }"></div>
+</div>
+
+<div class="sorting__graph">
+    <div *ngFor="let bar of shitSort$ | async" class="sorting__bar" 
+        [ngStyle]="{ 'height': bar.value + 'px', 'background-color': bar | color }"></div>
+</div>

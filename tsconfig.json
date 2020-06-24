@@ -17,7 +17,17 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@vizHttp/*": ["./src/app/core/http/*"],
+      "@vizCore/*": ["./src/app/core/*"],
+      "@vizServices/*": ["./src/app/core/services/*"],
+      "@vizModules/*": ["./src/app/modules/*"],
+      "@vizShared/*": ["./src/app/shared/*"],
+      "@vizObservables/*": ["src/app/core/observables/*"],
+      "@vizSorting/*": ["./src/app/modules/sorting/*"],
+      "@vizPathFinding/*": ["./src/app/modules/path-finding/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
